@@ -45,24 +45,23 @@ public class main {
             }
 
         } */
-        if (exp.length == 3) {
-            if (isInt(exp[0]) && isInt(exp[2])) {
-                result = (calcArab(Integer.parseInt(exp[0]), Integer.parseInt(exp[2]), exp[1])) + "";
-            }
-        }
-        else if (exp.length == 5) {
-            if (isInt(exp[0]) && isInt(exp[1]) && isInt(exp[4])&& isInt(exp[3])) {
-            result = (calcArab(Integer.parseInt(exp[0]+exp[1]), Integer.parseInt(exp[3]+exp[4]), exp[2])) + "";
-        } }
-        else if (exp.length == 4) {
-            if (isInt(exp[0]) && isInt(exp[1]) && isInt(exp[3])) {
-                result = (calcArab(Integer.parseInt(exp[0] + exp[1]), Integer.parseInt(exp[3]), exp[2])) + "";
-            }
-            else if(isInt(exp[0]) && isInt(exp[2]) && isInt(exp[3]))
-            {
-                result = (calcArab(Integer.parseInt(exp[0]), Integer.parseInt(exp[2] + exp[3]), exp[1])) + "";
-            }
+        if (isInt(exp[0])) {
+            if (exp.length == 3) {
+                if (isInt(exp[0]) && isInt(exp[2])) {
+                    result = (calcArab(Integer.parseInt(exp[0]), Integer.parseInt(exp[2]), exp[1])) + "";
+                }
+            } else if (exp.length == 5) {
+                if (isInt(exp[0]) && isInt(exp[1]) && isInt(exp[4]) && isInt(exp[3])) {
+                    result = (calcArab(Integer.parseInt(exp[0] + exp[1]), Integer.parseInt(exp[3] + exp[4]), exp[2])) + "";
+                }
+            } else if (exp.length == 4) {
+                if (isInt(exp[0]) && isInt(exp[1]) && isInt(exp[3])) {
+                    result = (calcArab(Integer.parseInt(exp[0] + exp[1]), Integer.parseInt(exp[3]), exp[2])) + "";
+                } else if (isInt(exp[0]) && isInt(exp[2]) && isInt(exp[3])) {
+                    result = (calcArab(Integer.parseInt(exp[0]), Integer.parseInt(exp[2] + exp[3]), exp[1])) + "";
+                }
 
+            }
         }
 
 
